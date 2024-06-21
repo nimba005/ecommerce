@@ -25,8 +25,8 @@ Make cure you have the following installed on your local machine:
 - **npm**
 
 ## Clone the Repository
-`git clone https://github.com/yourusername/rentals.git
-cd rentals`
+`git clone https://github.com/yourusername/rentals.git`
+`cd rentals`
 ## Install Dependencies
 `npm install`
 ### Start the Development Server
