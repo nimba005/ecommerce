@@ -21,8 +21,8 @@ Rental is an e-commerce platform built using React frameworks, designed to facil
 To get a local copy up and running, foloow these simple steps:
 ### Prerequisites
 Make cure you have the following installed on your local machine:
-* **Node.js**
-- **npm**
+* [Node.js](#)
+- [npm](#)
 
 ## Clone the Repository
 `git clone https://github.com/yourusername/rentals.git`
