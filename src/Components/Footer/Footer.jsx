@@ -110,16 +110,16 @@ const Footer = () => {
             </div>
             {/* icons for mobile */}
             <div className="flex flex-row items-center gap-3 md:hidden">
-              <a href="https://twitter.com/_amos_kyalo">
+              <a href="https://twitter.com/nimbajohn">
                 <BsTwitter className="text-navColor text-2xl" />
               </a>
-              <a href="https://twitter.com/_amos_kyalo">
+              <a href="https://twitter.com/nimbajohn">
                 <BsLinkedin className="text-navColor text-2xl" />
               </a>
-              <a href="https://twitter.com/_amos_kyalo">
+              <a href="https://twitter.com/nimbajohn">
                 <AiFillInstagram className="text-navColor text-3xl" />
               </a>
-              <a href="https://wa.me/254791686851">
+              <a href="https://wa.me/254746133309">
                 <BsWhatsapp className="text-navColor text-2xl" />
               </a>
             </div>
