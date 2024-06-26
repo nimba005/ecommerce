@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #eeeeee;
+}
+
+nav {
+  z-index: 999;
+}
+
+.hero {
+  height: max-content;
+  /* padding-bottom: 2rem; */
+}
+
+#pricing {
+  margin-top: 4rem;
+}
+
+/* .about {
+  background-image: url(../src/Assets/Blogs/blog\\(1\).svg);
+  background-repeat: no-repeat;
+  background-position: -20%;
+} */
+
+.products {
+  background-image: url("../src/Assets/Blogs/blog(1).svg");
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.footer {
+  margin: 10rem auto 5rem;
+  /* transform: scale(1.2); */
+}
+
+.policy p {
+  margin: 1rem 0;
+}
+
+.policy h2 {
+  font-size: 24px;
+  color: #244886;
+  font-weight: 600;
+}
+
+.policy ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  width: 75%;
+  margin: 0 auto 1rem;
+}
+
+.policy a {
+  color: #244886;
+}
+
+@media (max-width: 700px) {
+  .policy h2 {
+    font-size: 20px;
+  }
+
+  .policy ul {
+    width: 100%;
+  }
+
+  .policy li {
+    margin: 0 0 0 1rem;
+  }
+
+  .policy p,
+  .policy h2 {
+    padding: 0 1rem;
+  }
+
+  .policy h1 {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
+/* .testimonials {
+  background-image: url('../src/Assets/house.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem 0 1rem 0;
+}
+  
+@media (max-width: 700px) {
+  .testimonials {
+    padding: 1rem 0;
+  }
+} */
