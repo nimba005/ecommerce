@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="hidden h-full mt-10 rounded-t-full overflow-hidden md:w-1/2 md:mt-0 md:flex">
             <img
               src={image}
-              alt="Hero section image"
+              alt="Hero"
               className="h-[20rem] w-full object-cover lg:h-[40vw] xl:h-[40rem] md:h-[45vw]"
             />
           </div>
