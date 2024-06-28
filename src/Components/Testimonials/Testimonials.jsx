@@ -7,7 +7,7 @@ import person2 from "../../Assets/Testimonials/person2.jpeg";
 import person3 from "../../Assets/Testimonials/person3.jpeg";
 import person4 from "../../Assets/Testimonials/person4.jpeg";
 
-const TestimonialsData = [
+const testimonials = [
   {
     name: "Jacob Oyugi",
     image: person,
