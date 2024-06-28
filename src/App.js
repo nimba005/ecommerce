@@ -4,7 +4,6 @@ import Home from "./Components/Home/Home";
 import Privacy from './Components/Privacy/Privacy';
 import Terms from './Components/Terms/Terms';
 import Pricing from './Components/Pricing/Pricing';
-import Footer from './Components/Footer/Footer';
 import { BASE_URL } from './Components/Config/Config';
 
 function App() {

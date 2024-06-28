@@ -3,7 +3,6 @@ import Nav from "../Hero/Nav";
 import { CgArrowLongRight } from "react-icons/cg";
 import image from "../../Assets/Blobs/blob.png";
 import { data, steps } from "./Data";
-import { useState } from "react";
 import { Link } from "react-router-dom";  
 
 const Pricing = () => {

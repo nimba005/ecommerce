@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "../../Assets/image.jpg";
+import image from "../../Assets/image.png";
 import Nav from "./Nav";
 
 const Hero = () => {

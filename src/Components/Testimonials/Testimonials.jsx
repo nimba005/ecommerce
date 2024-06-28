@@ -4,7 +4,7 @@ import Carousel from "../Carousel/Carousel";
 import { CarouselItem } from "../Carousel/Carousel";
 import person from "../../Assets/Testimonials/person.jpeg";
 import person2 from "../../Assets/Testimonials/person2.jpeg";
-import person3 from "../../Assets/Testimonials/person3.jpg";
+import person3 from "../../Assets/Testimonials/person3.jpeg";
 import person4 from "../../Assets/Testimonials/person4.jpeg";
 
 const TestimonialsData = [
