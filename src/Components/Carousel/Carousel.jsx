@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";  
 
 export const CarouselItem = ({ children }) => {
   return (
@@ -8,11 +8,11 @@ export const CarouselItem = ({ children }) => {
       {children}
     </div>
   );
-};
+};  
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(false);  
 
   const setIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -21,7 +21,7 @@ const Carousel = ({ children }) => {
       newIndex = 0;
     }
     setCurrentIndex(newIndex);
-  };
+  };  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +33,7 @@ const Carousel = ({ children }) => {
     return () => {
       clearInterval(interval);
     };
-  }, [currentIndex, paused, children]);
+  }, [currentIndex, paused, setIndex]);
 
   const reactChildren = React.Children.toArray(children);
 
@@ -44,13 +44,13 @@ const Carousel = ({ children }) => {
           className="bg-navColor py-2 px-3 rounded cursor-pointer"
           onClick={() => setIndex(currentIndex - 1)}
         >
-          <MdOutlineArrowBackIos className="text-white" />
+          <MdOutlineArrowBackIosNew className="text-white" />
         </div>
         <div
           className="bg-navColor py-2 px-3 rounded cursor-pointer"
           onClick={() => setIndex(currentIndex + 1)}
         >
-          <MdArrowForwardIos className="text-white" />
+          <MdOutlineArrowForwardIos className="text-white" />
         </div>
       </div>
       <div
@@ -76,6 +76,6 @@ const Carousel = ({ children }) => {
       </div>
     </div>
   );
-};
+};  
 
 export default Carousel;
