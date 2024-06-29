@@ -6,7 +6,6 @@ import { data, steps } from "./Data";
 import { Link } from "react-router-dom";  
 
 const Pricing = () => {
-  const [active, setActive] = useState("#");  
 
   const navigateToFree = (name) => {
     if(name === "Free Trial"){

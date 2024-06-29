@@ -14,14 +14,14 @@ const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [paused, setPaused] = useState(false);  
 
-  const setIndex = (newIndex) => {
+  const setIndex = useCallback((newIndex) => {
     if (newIndex < 0) {
       newIndex = React.Children.count(children) - 1;
     } else if (newIndex >= React.Children.count(children)) {
       newIndex = 0;
     }
     setCurrentIndex(newIndex);
-  };  
+  }, [children]);  
 
   useEffect(() => {
     const interval = setInterval(() => {
