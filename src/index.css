@@ -25,13 +25,13 @@ nav {
 }
 
 /* .about {
-  background-image: url(../src/Assets/Blogs/blog\\(1\).svg);
+  background-image: url(../src/Assets/Blobs/blob\\(1\).svg);
   background-repeat: no-repeat;
   background-position: -20%;
 } */
 
 .products {
-  background-image: url("../src/Assets/Blogs/blog(1).svg");
+  background-image: url("../src/Assets/Blobs/blob(1).svg");
   background-repeat: no-repeat;
   background-position: 100%;
 }
