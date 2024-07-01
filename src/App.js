@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from "./Components/Home/Home";
+import Home from "./Components/Home/Home.jsx";
 import Privacy from './Components/Privacy/Privacy';
 import Terms from './Components/Terms/Terms';
 import Pricing from './Components/Pricing/Pricing';

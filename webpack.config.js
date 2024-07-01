@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
   entry: './src/index.js',  // Entry point of your application
@@ -14,6 +15,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',  // Use Babel loader for JS files
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],  // Babel presets
+          },
         },
       },
       {
@@ -34,12 +38,23 @@ module.exports = {
     fallback: {
       "path": require.resolve("path-browserify"),
       "os": require.resolve("os-browserify/browser"),
-      "crypto": require.resolve("crypto-browserify"),
+      "fs": require.resolve("browserify-fs"),
+      "stream": require.resolve("stream-browserify"),
+      "process": require.resolve("process/browser"),
+      "util": require.resolve("util/"),
     }
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',  // Provide process for Node.js modules
+      Buffer: ['buffer', 'Buffer'],  // Provide Buffer for Node.js modules
+    }),
+  ],
   devServer: {
-    static: './dist',  // Directory for the dev server to serve
-    hot: true,  // Enable Hot Module Replacement
+    static: {
+      directory: path.join(__dirname, 'dist'),  // Serve content from 'dist' directory
+    },
+    compress: true,
+    port: 8081,
   },
-  mode: 'development',  // Set the mode to development
 };

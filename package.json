@@ -9,21 +9,25 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.1",
+    "browserify-fs": "^1.0.0",
     "dom": "^0.0.3",
+    "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.4",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "redux-persist": "^6.0.0",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
-    "eject": "react-scripts eject" 
+    "start": "webpack serve --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +49,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.24.7",
     "autoprefixer": "^10.4.19",
     "crypto-browserify": "^3.12.0",
     "css-loader": "^7.1.2",
@@ -59,7 +64,7 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   },
-  "description": "Rental is an e-commerce platform built using React frameworks, designed to facilate the rentals of various items, The project is implemeted using JavaScript, HTML, abd CSS.",
+  "description": "Rental is an e-commerce platform built using React frameworks, designed to facilitate the rentals of various items, The project is implemented using JavaScript, HTML, and CSS.",
   "main": "postcss.config.js",
   "repository": {
     "type": "git",
