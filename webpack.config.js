@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',  // Set the mode to development
   entry: './src/index.js',  // Entry point of your application
   output: {
     filename: 'bundle.js',  // Output bundle file
@@ -11,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',  // Use Babel loader for JS files
@@ -30,7 +32,33 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',  // Handle image assets
+        use: [
+          {
+            loader: 'file-loader',
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
+            },
+          },
+        ],
+        type: 'asset/resource', // Handle images assets
       },
     ],
   },
@@ -46,6 +74,9 @@ module.exports = {
     }
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html'),  // Template file
+    }),
     new webpack.ProvidePlugin({
       process: 'process/browser',  // Provide process for Node.js modules
       Buffer: ['buffer', 'Buffer'],  // Provide Buffer for Node.js modules
@@ -57,5 +88,6 @@ module.exports = {
     },
     compress: true,
     port: 8081,
+    historyApiFallback: true,  // Enable HTML5 History API
   },
 };
