@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./Components/Home/Home.jsx";
-import Privacy from './Components/Privacy/Privacy';
-import Terms from './Components/Terms/Terms';
-import Pricing from './Components/Pricing/Pricing';
-import { BASE_URL } from './Components/Config/Config';
+import Privacy from './Components/Privacy/Privacy.jsx';
+import Terms from './Components/Terms/Terms.jsx';
+import Pricing from './Components/Pricing/Pricing.jsx';
+import { BASE_URL } from './Components/Config/Config.js';
 
 function App() {
   console.log('Base URL:', BASE_URL);

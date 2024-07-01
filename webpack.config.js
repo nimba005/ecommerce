@@ -35,6 +35,7 @@ module.exports = {
     ],
   },
   resolve: {
+    extensions: ['.js', '.jsx'],  // Resolve JS and JSX files
     fallback: {
       "path": require.resolve("path-browserify"),
       "os": require.resolve("os-browserify/browser"),
