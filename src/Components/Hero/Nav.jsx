@@ -37,7 +37,7 @@ const Nav = () => {
         <div className={`flex flex-col items-center absolute ${active ? "top-[4rem]" : "top-[-450%]"} duration-500 w-full pb-4 bg-navColor space-y-3 md:flex-row md:pb-0 md:bg-none md:space-x-5 md:space-y-0 md:relative md:w-max md:top-0`}>
           <Link to="/" className="text-white text-lg font-bold">Home</Link>
           <Link to="/about" className="text-white text-lg font-bold">About</Link>
-          <a href="#contacts" className="text-white text-lg font-bold">Contact</a>
+          <Link href="#contacts" className="text-white text-lg font-bold">Contact</Link>
           <Link to="/pricing" className="text-white text-lg font-bold">Pricing</Link>
           <Link to="/testimonials" className="text-white text-lg font-bold">Testimonials</Link>
           <Link to="/pricing" className="flex bg-white w-max rounded-3xl py-1 px-6 text-base text-navColor font-bold hover:bg-navColor hover:text-white hover:border duration-700 md:hidden">Get started</Link>

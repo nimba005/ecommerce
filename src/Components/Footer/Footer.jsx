@@ -108,6 +108,7 @@ const Footer = () => {
                 Get started
               </Link>
             </div>
+            
             {/* icons for mobile */}
             <div className="flex flex-row items-center gap-3 md:hidden">
               <a href="https://twitter.com/nimbajohn">
