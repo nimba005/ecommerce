@@ -8,11 +8,13 @@ import Terms from './Components/Terms/Terms';
 import Pricing from './Components/Pricing/Pricing';
 import Testimonials from './Components/Testimonials/Testimonials';
 import { BASE_URL } from './Components/Config/Config';
+import Nav from './Components/Hero/Nav';
 
 function App() {
   console.log('Base URL:', BASE_URL);
   return (
     <>
+      <Nav /> {/* Include Nav component here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

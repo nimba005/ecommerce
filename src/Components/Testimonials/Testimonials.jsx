@@ -15,8 +15,8 @@ const Testimonials = () => {
           Hear from our customers
         </h3>
         <div className="my-20 overflow-hidden w-full md:mx-auto md:w-[60%] lg:w-[75%] xl:w-[60%]">
-          <Courasel>
-            <CouraselItem>
+          <Carousel>
+            <CarouselItem>
               <div className="flex flex-col items-center">
                 <div className="flex h-20 w-20 p-1 rounded-full bg-imgColor overflow-hidded">
                   <img
@@ -38,8 +38,8 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </CouraselItem>
-            <CouraselItem>
+            </CarouselItem>
+            <CarouselItem>
               <div className="flex flex-col items-center">
                 <div className="flex h-20 w-20 p-1 rounded-full bg-imgColor overflow-hidded">
                   <img
@@ -61,8 +61,8 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </CouraselItem>
-            <CouraselItem>
+            </CarouselItem>
+            <CarouselItem>
               <div className="flex flex-col items-center">
                 <div className="flex h-20 w-20 p-1 rounded-full bg-imgColor overflow-hidded">
                   <img
@@ -84,8 +84,8 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </CouraselItem>
-            <CouraselItem>
+            </CarouselItem>
+            <CarouselItem>
               <div className="flex flex-col items-center">
                 <div className="flex h-20 w-20 p-1 rounded-full bg-imgColor overflow-hidded">
                   <img
@@ -107,8 +107,8 @@ const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </CouraselItem>
-          </Courasel>
+            </CarouselItem>
+          </Carousel>
         </div>
       </div>
     </section>
