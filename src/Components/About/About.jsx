@@ -1,7 +1,7 @@
 import React from "react";
 import { datas } from "./AboutData";
-import display1 from "../../Assets/display1.jpeg";
-import display2 from "../../Assets/display2.jpeg";
+import display1 from "../../Assets/display1.jpeg"
+import display2 from "../../Assets/display2.jpeg"
 import { Link } from "react-router-dom";
 
 const About = () => {

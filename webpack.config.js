@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { type } = require('os');
+const { hash } = require('crypto');
 
 module.exports = {
   mode: 'development',  // Set the mode to development
@@ -36,27 +37,10 @@ module.exports = {
         type: 'asset/resource',  // Handle images assets
         use: [
           {
-            loader: 'file-loader',
-          },
-          {
-            loader: 'image-webpack-loader',
+            loader: 'url-loader',
             options: {
-              mozjpeg: {
-                progressive: true,
-              },
-              optipng: {
-                enabled: true,
-              },
-              pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
+              limit: 8192,  // Limit the file size to 8KB
+              name: 'assets/[name].[hash].[ext]',  // Output file name
             },
           },
         ],
@@ -88,7 +72,11 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),  // Serve content from 'dist' directory
     },
     compress: true,
-    port: 8081,
+    port: 3000,
     historyApiFallback: true,  // Enable HTML5 History API
+    hot: true,  // Enable Hot Module Replacement
+    client: {
+      overlay: true,  // Show full-screen overlay in the browser when there are compiler errors or warnings
+    },
   },
 };
