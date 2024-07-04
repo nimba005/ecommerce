@@ -27,14 +27,11 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <p className="text-lg font-semibold text-navColor">
-                    Abdul Ali
+                    Nimba Oyugi
                   </p>
                   <ImQuotesLeft className="text-navColor my-2 md:my-5" />
                   <p className="text-base whitespace-normal text-center text-navColor md:text-lg">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Fugit dolorum hic optio enim ullam corrupti ex ut esse sint
-                    quisquam. Ipsum beatae non rerum recusandae nulla dolorum
-                    modi inventore debitis. Lorem, ipsum. Lorem, ipsum.
+                    "The service was exceptional! From start to finish, the entire process was smooth and efficient. Highly recommend!"
                   </p>
                 </div>
               </div>
@@ -50,14 +47,11 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <p className="text-lg font-semibold text-navColor">
-                    Richard Tait
+                    Catherine Angir
                   </p>
                   <ImQuotesLeft className="text-navColor my-2 md:my-5" />
                   <p className="text-base whitespace-normal text-center text-navColor md:text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore explicabo recusandae corporis laborum perspiciatis
-                    iste? Vel quisquam nemo voluptatum quae! Reiciendis
-                    perferendis sit soluta, neque aliquid nobis. Lorem, ipsum.
+                    "Absolutely fantastic experience! The customer support was prompt and very helpful. Would definitely use again."
                   </p>
                 </div>
               </div>
@@ -73,14 +67,11 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <p className="text-lg font-semibold text-navColor">
-                    Ruth Garcia
+                    Elizabeth Mwanda
                   </p>
                   <ImQuotesLeft className="text-navColor my-2 md:my-5" />
                   <p className="text-base whitespace-normal text-center text-navColor md:text-lg">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Esse eum impedit facere sequi amet quaerat nulla natus nobis
-                    odit accusantium error, quos ex repellat ut vero
-                    exercitationem, adipisci quod autem? Lorem, ipsum.
+                    "I was really impressed with the quality of service. Everything was handled professionally and efficiently. Five stars!"
                   </p>
                 </div>
               </div>
@@ -96,14 +87,11 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <p className="text-lg font-semibold text-navColor">
-                    Yusuf Joseph
+                    Philip Obuya
                   </p>
                   <ImQuotesLeft className="text-navColor my-2 md:my-5" />
                   <p className="text-base whitespace-normal text-center text-navColor md:text-lg">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Esse eum impedit facere sequi amet quaerat nulla natus nobis
-                    odit accusantium error, quos ex repellat ut vero
-                    exercitationem, adipisci quod autem? Lorem, ipsum.
+                    "A truly seamless experience from beginning to end. The team was friendly and attentive, making sure all my needs were met."
                   </p>
                 </div>
               </div>
