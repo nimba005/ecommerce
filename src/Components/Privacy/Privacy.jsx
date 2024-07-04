@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../Assets/image.png";
-import Nav from "../Hero/Nav";  
+import Nav from "../Hero/Nav"; 
 
 const Privacy = () => {
   return (

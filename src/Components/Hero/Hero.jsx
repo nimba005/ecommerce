@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "../../Assets/image.png";
-import Nav from "./Nav";
+
 
 const Hero = () => {
   return (
-    <section className="hero flex-col bg-navColor relative" id="home">
-      {/* nav */}
-
-      <Nav />
+    <section className="hero flex-col bg-navColor relative" id="home"> 
 
       {/* hero */}
       <div className="mt-10 h-full pb-10 xl:pb-0 lg:px-5 md:mt-20">

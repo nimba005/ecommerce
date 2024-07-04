@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from "./Components/Home/Home";
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
@@ -7,11 +7,9 @@ import Privacy from './Components/Privacy/Privacy';
 import Terms from './Components/Terms/Terms';
 import Pricing from './Components/Pricing/Pricing';
 import Testimonials from './Components/Testimonials/Testimonials';
-import { BASE_URL } from './Components/Config/Config';
-import Nav from './Components/Hero/Nav';
+import Nav from './Components/Hero/Nav'; // Import Nav component
 
 function App() {
-  console.log('Base URL:', BASE_URL);
   return (
     <>
       <Nav /> {/* Include Nav component here */}

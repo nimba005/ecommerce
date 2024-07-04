@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { type } = require('os');
 
 module.exports = {
   mode: 'development',  // Set the mode to development
@@ -31,7 +32,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',  // Handle images assets
         use: [
           {
             loader: 'file-loader',
@@ -58,7 +60,6 @@ module.exports = {
             },
           },
         ],
-        type: 'asset/resource', // Handle images assets
       },
     ],
   },

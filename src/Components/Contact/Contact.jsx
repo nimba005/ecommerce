@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import Nav from "../Hero/Nav";
-import { useState } from "react";
 
 const Contact = () => {
   return (

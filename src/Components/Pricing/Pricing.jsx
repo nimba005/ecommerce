@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../Hero/Nav";
+
 import { CgArrowLongRight } from "react-icons/cg";
 import image from "../../Assets/Blobs/blob.png";
 import { data, steps } from "./Data";
@@ -19,8 +19,7 @@ const Pricing = () => {
   return (
     <section>
       {/* nav */}
-      <div className="bg-stickyNav">
-        <Nav />
+      <div className="bg-stickyNav z-50">
       </div>
       <div className="flex flex-col max-w-screen-xl mx-auto my-5 text-center md:my-20">
         <h2 className="text-4xl px-2 font-semibold opacity-[0.9] md:px-0 md:text-6xl z-0">

@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";  
+import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 
 export const CarouselItem = ({ children }) => {
   return (
