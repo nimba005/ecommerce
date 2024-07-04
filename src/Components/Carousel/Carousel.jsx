@@ -3,16 +3,15 @@ import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/
 
 export const CarouselItem = ({ children }) => {
   return (
-    <div className="bg-white px-5 py-10 w-full inline-flex rounded"
-    style={{ transform: "scale(1)" }}>
+    <div className="bg-white px-5 py-10 w-full inline-flex rounded">
       {children}
     </div>
   );
-};  
+};
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [paused, setPaused] = useState(false);  
+  const [paused, setPaused] = useState(false);
 
   const setIndex = useCallback((newIndex) => {
     if (newIndex < 0) {
@@ -21,7 +20,7 @@ const Carousel = ({ children }) => {
       newIndex = 0;
     }
     setCurrentIndex(newIndex);
-  }, [children]);  
+  }, [children]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,18 +55,23 @@ const Carousel = ({ children }) => {
       <div
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
-        className={`inner whitespace-nonwrap md:space-x-2 duration-1000`}
-        style={{ transform: `translate(-${currentIndex * 100}%, 0)` }}
+        className="whitespace-nowrap transition-transform duration-1000"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { style: { transform: index === currentIndex ? "scale(0.5)" : "scale(1)" } });
-        })}
+        {reactChildren.map((child, index) => (
+          <div
+            key={index}
+            className={`inline-block w-full transition-transform duration-1000 ${index === currentIndex ? "scale-100" : "scale-95"}`}
+          >
+            {child}
+          </div>
+        ))}
       </div>
       <div className="flex flex-row items-center justify-center space-x-4 mt-5">
-        {reactChildren.map((child, i) => (
+        {reactChildren.map((_, i) => (
           <p
             onClick={() => setIndex(i)}
-            className={`cursor-pointer py-1.5 rounded-full duration-1000 ${
+            className={`cursor-pointer py-1.5 rounded-full transition-all duration-300 ${
               i === currentIndex ? "bg-navColor px-3" : "bg-white px-1.5"
             }`}
             key={i}
@@ -76,6 +80,6 @@ const Carousel = ({ children }) => {
       </div>
     </div>
   );
-};  
+};
 
 export default Carousel;
