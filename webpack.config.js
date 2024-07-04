@@ -1,16 +1,14 @@
 const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { type } = require('os');
-const { hash } = require('crypto');
 
 module.exports = {
-  mode: 'development',  // Set the mode to development
-  entry: './src/index.js',  // Entry point of your application
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js',  // Output bundle file
-    path: path.resolve(__dirname, 'dist'),  // Output directory
-    clean: true,  // Clean the output directory before emit
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   module: {
     rules: [
@@ -18,29 +16,48 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',  // Use Babel loader for JS files
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],  // Babel presets
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',  // Inject CSS into DOM
-          'css-loader',  // Translates CSS into CommonJS
-          'postcss-loader',  // Process CSS with PostCSS
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
         ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',  // Handle images assets
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 8192,  // Limit the file size to 8KB
-              name: 'assets/[name].[hash].[ext]',  // Output file name
+              name: '[path][name].[ext]',
+            },
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
             },
           },
         ],
@@ -48,7 +65,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],  // Resolve JS and JSX files
+    extensions: ['.js', '.jsx'],
     fallback: {
       "path": require.resolve("path-browserify"),
       "os": require.resolve("os-browserify/browser"),
@@ -60,23 +77,19 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),  // Template file
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
     new webpack.ProvidePlugin({
-      process: 'process/browser',  // Provide process for Node.js modules
-      Buffer: ['buffer', 'Buffer'],  // Provide Buffer for Node.js modules
+      process: 'process/browser',
+      Buffer: ['buffer', 'Buffer'],
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),  // Serve content from 'dist' directory
+      directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 3000,
-    historyApiFallback: true,  // Enable HTML5 History API
-    hot: true,  // Enable Hot Module Replacement
-    client: {
-      overlay: true,  // Show full-screen overlay in the browser when there are compiler errors or warnings
-    },
+    port: 8081,
+    historyApiFallback: true,
   },
 };
