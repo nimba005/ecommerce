@@ -73,7 +73,7 @@ const Footer = () => {
               <div className="flex flex-col">
                 <h2 className="text-lg text-navColor font-bold mb-2">CALL</h2>
                 <a href="tel:+254746133309" className="text-base text-navColor">
-                  Tel: +254791686851
+                  Tel: +254746133309
                 </a>
                 <span className="block text-navColor font-semibold my-1">Or</span>
                 <a href="tel:+254782339290" className="text-base text-navColor">

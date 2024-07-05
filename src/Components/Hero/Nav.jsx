@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/logo2.png";  
+import logo from "../../Assets/logo2.png";
 
 const Nav = () => {
   const [sticky, setSticky] = useState("#");
@@ -15,20 +15,20 @@ const Nav = () => {
         setSticky("#");
       }
       setActive(false);
-    };  
+    };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);  
+  }, []);
 
   const toggleMenu = () => {
     setActive((prevActive) => !prevActive);
-  };  
+  };
 
   return (
-    <nav className={`py-0 md:px-2 z-50 ${sticky === "sticky" ? "fixed w-full top-0 bg-stickyNav" : ""}`}>
+    <nav className={`py-0 md:px-2 z-50 bg-navColor ${sticky === "sticky" ? "fixed w-full top-0" : ""}`}>
       <div className="relative flex flex-row justify-between items-center mx-auto max-w-full md:max-w-screen-xl">
         <Link to="/" className="flex flex-row items-center h-16 md:h-20 lg:h-20 xl:h-20 z-50">
           <img src={logo} alt="Logo" className="h-full" />
@@ -51,6 +51,6 @@ const Nav = () => {
       </div>
     </nav>
   );
-};  
+};
 
 export default Nav;
