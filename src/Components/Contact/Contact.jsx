@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
@@ -9,6 +10,7 @@ const Contact = () => {
     message: ""
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,21 +20,20 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate sending form data to a server (or perform actual server submission)
-    // For demonstration purposes, just logging the data
-    console.log("Form submitted:", formData);
-
-    // Show feedback to the user
-    setFormSubmitted(true);
-
-    // Optional: Reset the form after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
+    try {
+      const response = await axios.post("http://localhost:5000/api/contact", formData);
+      setSubmissionMessage(response.data.message);
+      setFormSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    } catch (error) {
+      setSubmissionMessage("There was an error sending your message.");
+    }
   };
 
   return (
@@ -99,7 +100,7 @@ const Contact = () => {
           </button>
         </form>
         {formSubmitted && (
-          <p className="mt-4 text-white">Message sent successfully!</p>
+          <p className="mt-4 text-white">{submissionMessage}</p>
         )}
       </div>
     </div>

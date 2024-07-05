@@ -8,6 +8,7 @@ import Terms from './Components/Terms/Terms';
 import Pricing from './Components/Pricing/Pricing';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Nav from './Components/Hero/Nav'; // Import Nav component
+import Footer from './Components/Footer/Footer'; // Import Footer component
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
-      <footer />
+      <Footer /> {/* Include Footer component here */}
     </>
   );
 }
