@@ -1,26 +1,37 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import image from "../../Assets/Blobs/blob.png";
 import { data, steps } from "./Data";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const [active, setActive] = useState("#");
 
-  const click = true;
-  const navigateToFree = (name) => {
-    if(name === "Free Trial"){
-      window.location.replace("https://house-management-system.netlify.app/")
+  const handleGetStartedClick = (name) => {
+    let url = "";
+    switch (name) {
+      case "Free Trial":
+        url = "https://house-management-system.netlify.app/";
+        break;
+      case "Basic":
+        url = "https://house-management-system.netlify.app/";
+        break;
+      case "Premium":
+        url = "https://house-management-system.netlify.app/";
+        break;
+      case "VIP":
+        url = "https://house-management-system.netlify.app/";
+        break;
+      default:
+        url = "https://house-management-system.netlify.app/";
     }
-  }
+    window.location.replace(url);
+  };
 
   return (
     <section>
       {/* nav */}
-      <div className="bg-stickyNav z-50">
-      </div>
+      <div className="bg-stickyNav z-50"></div>
       <div className="flex flex-col max-w-screen-xl mx-auto my-5 text-center md:my-20">
         <h2 className="text-4xl px-2 font-semibold opacity-[0.9] md:px-0 md:text-6xl z-0">
           Make more online, <span className="text-navColor">for less</span>
@@ -78,11 +89,11 @@ const Pricing = () => {
                   <span className="text-base align-top">/month</span>
                 </p>
                 <p className="line-through mt-1 opacity-[0.7] font-semibold">${offer.original}</p>
-                <button onClick={click ? () => navigateToFree(offer.name) : ""} className="bg-navColor absolute bottom-2 left-[5%] w-[90%] py-2 rounded text-white font-semibold">
+                <button onClick={() => handleGetStartedClick(offer.name)} className="bg-navColor absolute bottom-2 left-[5%] w-[90%] py-2 rounded text-white font-semibold">
                   Get Started
                 </button>
               </div>
-              <div onClick= {click ? () => navigateToFree(offer.name) : ""} className="text-start mt-2 cursor-pointer">
+              <div onClick={() => handleGetStartedClick(offer.name)} className="text-start mt-2 cursor-pointer">
                 {offer.description}{" "}
                 <span className="flex flex-row items-end block text-navColor">
                   Go to {offer.name}{" "}
