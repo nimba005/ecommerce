@@ -18,7 +18,7 @@ Rental is an e-commerce platform built using React frameworks, designed to facil
 - **Admin Dashboard**: Manage item, users, and bookings
 
 ## Installation
-To get a local copy up and running, foloow these simple steps:
+To get a local copy up and running, follow these simple steps:
 ### Prerequisites
 Make cure you have the following installed on your local machine:
 * [Node.js]()
