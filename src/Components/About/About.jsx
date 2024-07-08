@@ -31,6 +31,14 @@ const About = () => {
               the stress or the extra miles involved. With a management system,
               you do not have to be present at all times to manage your rentals.
             </p>
+            <ul className="list-disc list-inside mt-4 text-left text-lg space-y-2">
+              <li>Property listing and advertising</li>
+              <li>Tenant screening and placement</li>
+              <li>Rent collection and financial management</li>
+              <li>Maintenance and repairs</li>
+              <li>Market analysis and investment advice</li>
+              <li>Legal and compliance assistance</li>
+            </ul>
             <Link
               to="/pricing"
               className="mt-5 bg-navColor border w-max mx-auto rounded-3xl py-2 px-6 text-base text-white font-bold hover:bg-white hover:text-navColor hover:border duration-500 md:mt-10 md:ml-10"
