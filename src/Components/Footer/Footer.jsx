@@ -178,7 +178,7 @@ const Footer = () => {
         </div>
         <div className="hidden md:flex flex-col items-center">
           <p className="flex flex-row items-center text-base text-navColor text-center mt-4">
-            copyright 2022
+            copyright 2024
             <AiOutlineCopyrightCircle />
             <a href="#home">Renters Success</a>
           </p>
