@@ -31,7 +31,9 @@
     "start": "webpack serve --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +61,7 @@
     "crypto-browserify": "^3.12.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "html-webpack-plugin": "^5.6.0",
     "image-webpack-loader": "^8.1.0",
     "os-browserify": "^0.3.0",
@@ -85,5 +88,5 @@
   "bugs": {
     "url": "https://github.com/nimba005/ecommerce/issues"
   },
-  "homepage": "/nimba005/ecommerce"
+  "homepage": "https://nimba005.github.io/ecommerce"
 }
